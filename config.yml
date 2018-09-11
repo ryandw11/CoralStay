@@ -21,6 +21,23 @@ stay_alive_coral:
     - FIRE_CORAL_WALL_FAN
     - HORN_CORAL_WALL_FAN
 
+#In survival mode you put the coral in the furnance and out pops the dead coral.
+Survival_Furnace_Recipe: true
+#The amount of dead coral you want it to give the player.
+Dead_Coral_Amount: 1
+#How long it takes to cook the coral.
+Cook_Time: 10
+
+# If you want only certain players to place coral.
+Restricted_Access:
+    Enabled: false
+    Permission: 'coralstay.placecoral'
+    # If players should be not be allowed to place coral. False means it is disabled.
+    BlockPlacement:
+        Enabled: false
+        Deny_Message: '&cYou do not have permission to place coral!'
+    
+
 #If this is only allowed on certain worlds.
 World_Whitelist_Enabled: false
 #The worlds this is allowed on.

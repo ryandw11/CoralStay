@@ -1,6 +1,10 @@
 name: CoralStay
-version: 1.0
+version: 1.1
 main: me.ryandw11.coralstay.CoralStay
 author: Ryandw11
 description: Prevent coral from drying up.
 api-version: 1.13
+commands:
+    coralinspect:
+     description: Inspect coral blocks.
+     aliases: [cinspect, corali, coi]
