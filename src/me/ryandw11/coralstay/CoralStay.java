@@ -73,8 +73,9 @@ public class CoralStay extends JavaPlugin implements Listener{
 		if(getConfig().getBoolean("Survival_Furnace_Recipe")) {
 			for(Material m : blocks) {
 				ItemStack result = new ItemStack(Material.valueOf("DEAD_" + m.toString()), getConfig().getInt("Dead_Coral_Amount"));
-			    FurnaceRecipe fr = new FurnaceRecipe(NamespacedKey.minecraft("coralstay_" + m.toString().toLowerCase()), result, m, 1, getConfig().getInt("Cook_Time"));
-			    Bukkit.addRecipe(fr);
+				FurnaceRecipe fr = new FurnaceRecipe(new NamespacedKey(this, m.toString().toLowerCase()), result, m, 1, getConfig().getInt("Cook_Time"));
+			    if(fr.getInput().getType().isItem())
+			    	getServer().addRecipe(fr); 
 			}
 		}
 	}
