@@ -1,2 +1,2 @@
 # CoralStay
-A minecraft java plugin. Prevent coral from dying | 1.13.1
+A plugin for Spigot to prevent coral from dying when out of water.
